@@ -1,5 +1,6 @@
 #include "daisy_patch_sm.h"
 #include "daisysp.h"
+#include "wavetables.h"
 
 using namespace daisy;
 using namespace patch_sm;
@@ -20,14 +21,15 @@ class OscilatorWaveTable
 
     float  samplerate_;
     float  amp_            = 0.5f;
-    int    waveTableLength = 512;
+     int    waveTableLength = 512;
     float* waveTable;
 
   public:
     void Init(float sample_rate)
     {
         samplerate_ = sample_rate;
-        Generate_AdditiveSaw_WaveTable();
+        //Generate_AdditiveSaw_WaveTable();
+        Populate_Wv(fmish_wt);
     };
 
     void SetAmp(float amp) { amp_ = amp; }
@@ -71,6 +73,15 @@ class OscilatorWaveTable
     }
 
   private:
+    void Populate_Wv(const float (wt)[512])
+    {
+        waveTable = new float[waveTableLength];
+        for(int n = 0; n < waveTableLength; n++)
+        {
+            waveTable[n] = wt[n];
+        }
+    }
+
     void Generate_Triangle_WaveTable()
     {
         waveTable = new float[waveTableLength];
