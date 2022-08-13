@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/siavashfathi/Desktop/DaisyExamples/seed/Sia/Midi_ToCv'
+make: Nothing to be done for `all'.
+ 
+make: Leaving directory `/Users/siavashfathi/Desktop/DaisyExamples/seed/Sia/Midi_ToCv'
+ 

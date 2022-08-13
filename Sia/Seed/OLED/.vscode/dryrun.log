@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/siavashfathi/Desktop/DaisyExamples/seed/Sia/OLED'
+make: Leaving directory `/Users/siavashfathi/Desktop/DaisyExamples/seed/Sia/OLED'
+ 
+Makefile:13: ../../libDaisy/core/Makefile: No such file or directory
+make: *** No rule to make target `../../libDaisy/core/Makefile'.
+make: Failed to remake makefile `../../libDaisy/core/Makefile'.
+make: *** No targets specified and no makefile found.  Stop.
+
