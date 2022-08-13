@@ -8,6 +8,126 @@ using namespace daisysp;
 DaisyPatchSM hw;
 
 
+#define PI_F 3.1415927410125732421875f
+#define TWOPI_F (2.0f * PI_F)
+constexpr float TWO_PI_RECIP = 1.0f / TWOPI_F;
+
+class OscilatorWaveTable
+{
+    float modulo_counter_
+        = 0; //here it's equal to readPointer of the wave table
+    float phase_inc_;
+
+    float  samplerate_;
+    float  amp_            = 0.5f;
+    int    waveTableLength = 512;
+    float* waveTable;
+
+  public:
+    void Init(float sample_rate)
+    {
+        samplerate_ = sample_rate;
+        Generate_AdditiveSaw_WaveTable();
+    };
+
+    void SetAmp(float amp) { amp_ = amp; }
+
+    void SetFreq(float freq)
+    {
+        phase_inc_ = waveTableLength * (freq / samplerate_);
+    }
+
+    // Processes the waveform to be generated, returning one sample. This should be called once per sample period.
+    float Process()
+    {
+        //Wraps Modulo Counter between the length of wavetable, to act as a circular buffer
+        if(modulo_counter_ >= waveTableLength)
+        {
+            modulo_counter_ -= waveTableLength;
+        };
+
+        //Method 1: no interpolation
+        //float out = waveTable[(int)modulo_counter_];
+
+        //Method 2: linear interpolatation.
+        int currentSample = (int)modulo_counter_;
+        int nextSample    = currentSample + 1;
+        if(nextSample >= waveTableLength)
+        {
+            nextSample = 0;
+        }
+
+        float out = Linear_Interpolate(waveTable[currentSample],
+                                       waveTable[nextSample],
+                                       modulo_counter_ - currentSample);
+
+        //Method 3: Cubic interpolation
+        //to be done.
+
+        // add phase inc, which also defines the frequency.
+        modulo_counter_ += phase_inc_;
+
+        return amp_ * out;
+    }
+
+  private:
+    void Generate_Triangle_WaveTable()
+    {
+        waveTable = new float[waveTableLength];
+
+        //Genrate a triangle wave form ramping from -1 to 1 for half of the table
+        //then from 1 to -1 for the other half
+        for(int n = 0; n < waveTableLength / 2; n++)
+        {
+            waveTable[n] = -1.0f + (4.0f * (float)n / (float)waveTableLength);
+        }
+        for(int n = waveTableLength / 2; n < waveTableLength; n++)
+        {
+            waveTable[n] = +1.0f
+                           - (4.0f * (float)(n - (waveTableLength / 2))
+                              / (float)waveTableLength);
+        }
+    };
+
+    void Generate_Sin_WaveTable()
+    {
+        waveTable = new float[waveTableLength];
+
+        for(int n = 0; n < waveTableLength; n++)
+        {
+            //waveTable[n] =0;
+            waveTable[n] = sin(TWOPI_F * (float)n / (float)waveTableLength);
+        }
+    };
+
+    void Generate_AdditiveSaw_WaveTable()
+    {
+        waveTable = new float[waveTableLength];
+
+        for(int n = 0; n < waveTableLength; n++)
+        {
+            //waveTable[n] =0;
+            waveTable[n]
+                = 0.5 * sin(TWOPI_F * (float)n / (float)waveTableLength)
+                  + 0.25f
+                        * sin(2.0 * TWOPI_F * (float)n / (float)waveTableLength)
+                  + 0.125f
+                        * sin(3.0 * TWOPI_F * (float)n / (float)waveTableLength)
+                  + 0.0625f
+                        * sin(4.0 * TWOPI_F * (float)n / (float)waveTableLength)
+                  + 0.03125f
+                        * sin(5.0 * TWOPI_F * (float)n
+                              / (float)waveTableLength);
+        }
+    };
+
+    float inline Linear_Interpolate(float s1, float s2, float f)
+    {
+        //return a weighted average of 2 samples based on fraction (f). (f is between 0 to 1)
+        return (s1 * (1.0f - f)) + (s2 * f);
+    }
+};
+
 class OscillatorUsing0to1ModuloCounter
 {
     float modulo_counter_ = 0;
@@ -68,9 +188,6 @@ class OscillatorUsing0to1ModuloCounter
     }
 };
 
-#define PI_F 3.1415927410125732421875f
-#define TWOPI_F (2.0f * PI_F)
-constexpr float TWO_PI_RECIP = 1.0f / TWOPI_F;
 
 class OscillatorUsingTwoPieModuloCounter
 {
@@ -127,8 +244,8 @@ class OscillatorUsingTwoPieModuloCounter
 };
 
 OscillatorUsing0to1ModuloCounter sosc;
-
-Oscillator osc;
+OscilatorWaveTable               wtOsc;
+Oscillator                       osc;
 
 void AudioCallback(AudioHandle::InputBuffer  in,
                    AudioHandle::OutputBuffer out,
@@ -144,6 +261,7 @@ void AudioCallback(AudioHandle::InputBuffer  in,
     float fine   = hw.GetAdcValue(CV_3) * 50;
 
     sosc.SetFreq(coarse + fine);
+    wtOsc.SetFreq(coarse + fine);
 
     float sat = (hw.GetAdcValue(CV_4) * 10.0f) + 1.0f;
     sosc.SetSat(sat);
@@ -151,7 +269,7 @@ void AudioCallback(AudioHandle::InputBuffer  in,
     for(size_t i = 0; i < size; i++)
     {
         float sig  = osc.Process();
-        float sig2 = sosc.Process();
+        float sig2 = wtOsc.Process();
         OUT_L[i]   = sig;
         OUT_R[i]   = sig2;
     }
@@ -165,6 +283,7 @@ int main(void)
 
     osc.Init(hw.AudioSampleRate());
     sosc.Init(hw.AudioSampleRate());
+    wtOsc.Init(hw.AudioSampleRate());
 
     osc.SetAmp(0.5f);
     osc.SetFreq(440.f);
@@ -172,6 +291,9 @@ int main(void)
 
     sosc.SetFreq(440.f);
     sosc.SetAmp(0.5f);
+
+    wtOsc.SetFreq(440.f);
+    wtOsc.SetAmp(0.5f);
 
     hw.StartAudio(AudioCallback);
     while(1) {}
