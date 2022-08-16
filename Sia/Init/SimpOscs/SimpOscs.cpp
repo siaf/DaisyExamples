@@ -1,6 +1,7 @@
 #include "daisy_patch_sm.h"
 #include "daisysp.h"
 #include "wavetables.h"
+#include <complex.h>
 
 using namespace daisy;
 using namespace patch_sm;
@@ -8,10 +9,123 @@ using namespace daisysp;
 
 DaisyPatchSM hw;
 
+//converts decibel amplitude to linear
+inline float dbtolin(float db)
+{
+    return powf(10, db / 20.0f);
+}
+
+//converts midi value to freq in hz, 69 is middle A = 440Hz. (A above middle C (60))
+//note 1.0f value is 1 semitone, 0.5f is a quarter tone, and you can still use fractions
+inline float midi_to_hz(float pitch)
+{
+    return 440.0f * powf(2.0, (pitch - 69.0f) / 12.0f);
+}
+
+//converts midi value to freq in hz, 69 is middle A = 440Hz. (A above middle C (60))
+//note 1.0f value is 1 semitone, 0.5f is a quarter tone, and you can still use fractions
+inline float hz_to_midi(float freq)
+{
+    return 69.0f + 12.0f * log2f(freq / 440.0f);
+}
 
 #define PI_F 3.1415927410125732421875f
 #define TWOPI_F (2.0f * PI_F)
 constexpr float TWO_PI_RECIP = 1.0f / TWOPI_F;
+
+class OscilatorSinVectorRotation
+{
+    float samplerate_;
+    float amp_ = 0.5f;
+    float freq_;
+
+    std::complex<float> multiplier = 1;
+    std::complex<float> value      = 1;
+
+  public:
+    void Init(float sample_rate)
+    {
+        samplerate_ = sample_rate;
+        SetFreq(440.0f);
+    };
+
+    void SetAmp(float amp) { amp_ = amp; }
+
+    void SetFreq(float freq)
+    {
+        float phaseIncrement = (freq * TWOPI_F / samplerate_);
+        multiplier.real(cos(phaseIncrement));
+        multiplier.imag(sin(phaseIncrement));
+    }
+
+    float Process()
+    {
+        // multiplication of complex numbers causes rotation around the circle and thus calcs the sin.
+        // see: https://www.youtube.com/watch?v=TBCf1p7BSek
+        // src: https://github.com/cesaref/ADC2021/blob/main/demos/Demo1/CordicSine/CordicSine.soul
+        value = value * multiplier;
+        return amp_ * value.imag();
+    }
+};
+
+class OscilatorAdditiveVectorRotation
+{
+    float samplerate_;
+    float amp_       = 0.5f;
+    float freq_      = 440.0;
+    int   harmonics_ = 64;
+
+    std::vector<std::complex<float>> multiplier;
+    std::vector<std::complex<float>> value;
+    std::vector<float>               amplitudes;
+
+  public:
+    void Init(float sample_rate)
+    {
+        samplerate_ = sample_rate;
+        SetFreq(440.0f);
+
+        for(int i = 0; i < harmonics_; i++)
+        {
+            multiplier.push_back(1.0f);
+            value.push_back(1.0f);
+            amplitudes.push_back(0.0f);
+        }
+    };
+
+    void SetAmp(float amp) { amp_ = amp; }
+
+    void SetFreq(float freq)
+    {
+        freq_ = freq;
+        for(int i = 0; i < harmonics_; i++)
+        {
+            float harmonicFrequency = freq_ * float(i + 1);
+            float phaseIncrement = (harmonicFrequency * TWOPI_F / samplerate_);
+            multiplier[i].real(cos(phaseIncrement));
+            multiplier[i].imag(sin(phaseIncrement));
+
+            if(harmonicFrequency < (samplerate_ / 2))
+                amplitudes[i] = 1.0f / float(i + 1);
+        }
+    }
+
+    float Process()
+    {
+        // multiplication of complex numbers causes rotation around the circle and thus calcs the sin.
+        // see: https://www.youtube.com/watch?v=TBCf1p7BSek
+        // src: https://github.com/cesaref/ADC2021/blob/main/demos/Demo1/CordicSine/CordicSine.soul
+        float out = 0.0f;
+
+        for(int i = 0; i < harmonics_; i++)
+        {
+            value[i] = value[i] * multiplier[i];
+            out += value[i].imag() * amplitudes[i];
+        }
+
+        return amp_ * out;
+    }
+};
 
 class OscilatorWaveTable
 {
@@ -21,7 +135,7 @@ class OscilatorWaveTable
 
     float  samplerate_;
     float  amp_            = 0.5f;
-     int    waveTableLength = 512;
+    int    waveTableLength = 512;
     float* waveTable;
 
   public:
@@ -29,8 +143,16 @@ class OscilatorWaveTable
     {
         samplerate_ = sample_rate;
         //Generate_AdditiveSaw_WaveTable();
-        Populate_Wv(fmish_wt);
+        //Populate_Wv(fmish_wt);
+        Generate_Sin_WaveTable();
+        //Generate_Triangle_WaveTable();
     };
+
+    void Init(float sample_rate, float* wave_table)
+    {
+        samplerate_ = sample_rate;
+        waveTable   = wave_table;
+    }
 
     void SetAmp(float amp) { amp_ = amp; }
 
@@ -48,6 +170,7 @@ class OscilatorWaveTable
             modulo_counter_ -= waveTableLength;
         };
 
+        float out;
         //Method 1: no interpolation
         //float out = waveTable[(int)modulo_counter_];
 
@@ -59,12 +182,17 @@ class OscilatorWaveTable
             nextSample = 0;
         }
 
-        float out = Linear_Interpolate(waveTable[currentSample],
-                                       waveTable[nextSample],
-                                       modulo_counter_ - currentSample);
+        out = Linear_Interpolate(waveTable[currentSample],
+                                 waveTable[nextSample],
+                                 modulo_counter_ - currentSample);
 
         //Method 3: Cubic interpolation
-        //to be done.
+        out = Hermite_Interpolate(
+            modulo_counter_ - currentSample,
+            waveTable[(currentSample - 1 + waveTableLength) % waveTableLength],
+            waveTable[(currentSample + waveTableLength) % waveTableLength],
+            waveTable[(currentSample + 1 + waveTableLength) % waveTableLength],
+            waveTable[(currentSample + 2 + waveTableLength) % waveTableLength]);
 
         // add phase inc, which also defines the frequency.
         modulo_counter_ += phase_inc_;
@@ -136,6 +264,97 @@ class OscilatorWaveTable
     {
         //return a weighted average of 2 samples based on fraction (f). (f is between 0 to 1)
         return (s1 * (1.0f - f)) + (s2 * f);
+    }
+
+    // a form of cubic interpolate, other common one is called newton.
+    // from:https://www.musicdsp.org/en/latest/Other/93-hermite-interpollation.html
+    float inline Hermite_Interpolate(float sample_offset,
+                                     float value0,
+                                     float value1,
+                                     float value2,
+                                     float value3)
+    {
+        const float slope0 = (value2 - value0) * 0.5f;
+        const float slope1 = (value3 - value1) * 0.5f;
+        const float v      = value1 - value2;
+        const float w      = slope0 + v;
+        const float a      = w + v + slope1;
+        const float b_neg  = w + a;
+
+        return ((((a * sample_offset) - b_neg) * sample_offset + slope0)
+                    * sample_offset
+                + value1);
+    }
+};
+
+//contains multiple wave table oscs
+class AdditiveWaveTable
+{
+  private:
+    uint16_t                        numOfOscs       = 48;
+    uint16_t                        numOfActiveOscs = 1;
+    std::vector<OscilatorWaveTable> wts;
+    float                           samplerate_;
+    float                           nyquest_;
+    float                           amp_            = 0.5f;
+    float                           freq_           = 440.0;
+    int                             waveTableLength = 512;
+    std::vector<float>              waveTable;
+
+    void Generate_Sin_WaveTable()
+    {
+        for(int n = 0; n < waveTableLength; n++)
+        {
+            waveTable.push_back(
+                sin(TWOPI_F * (float)n / (float)waveTableLength));
+        }
+    };
+
+  public:
+    void Init(float sample_rate)
+    {
+        samplerate_ = sample_rate;
+        nyquest_    = sample_rate / 2.0f;
+        Generate_Sin_WaveTable();
+        for(uint16_t i = 0; i < numOfOscs; i++)
+        {
+            OscilatorWaveTable wt;
+            wt.Init(sample_rate, waveTable.data());
+            wt.SetAmp(0.0f);
+            wts.push_back(wt);
+        }
+        wts[0].SetAmp(1.0f);
+    };
+
+    void SetAmp(float amp) { amp_ = amp; }
+
+    void SetFreq(float freq)
+    {
+        freq_ = freq;
+        //for each osc set the harmonic
+        for(uint16_t i = 0; i < numOfOscs; i++)
+        {
+            float harmonic = freq * (i + 1);
+            wts[i].SetFreq(freq * (i + 1));
+
+            if(harmonic < nyquest_)
+            {
+                numOfActiveOscs
+                    = i; //used to avoid aliasing by keeping only harmonics below nyquist active.
+            }
+        }
+    }
+
+    void SetHarmonic(int harmonic, float amp) { wts[harmonic].SetAmp(amp); }
+
+    float Process()
+    {
+        float out = 0.0f;
+        for(uint16_t i = 0; i < numOfActiveOscs; i++)
+        {
+            out += wts[i].Process();
+        }
+        return amp_ * out;
     }
 };
 
@@ -257,6 +476,8 @@ class OscillatorUsingTwoPieModuloCounter
 OscillatorUsing0to1ModuloCounter sosc;
 OscilatorWaveTable               wtOsc;
 Oscillator                       osc;
+AdditiveWaveTable                additive;
+OscilatorAdditiveVectorRotation  sinAdditiveOsc;
 
 void AudioCallback(AudioHandle::InputBuffer  in,
                    AudioHandle::OutputBuffer out,
@@ -273,14 +494,16 @@ void AudioCallback(AudioHandle::InputBuffer  in,
 
     sosc.SetFreq(coarse + fine);
     wtOsc.SetFreq(coarse + fine);
+    additive.SetFreq(coarse + fine);
+    sinAdditiveOsc.SetFreq(coarse + fine);
 
     float sat = (hw.GetAdcValue(CV_4) * 10.0f) + 1.0f;
     sosc.SetSat(sat);
 
     for(size_t i = 0; i < size; i++)
     {
-        float sig  = osc.Process();
-        float sig2 = wtOsc.Process();
+        float sig  = wtOsc.Process();
+        float sig2 = additive.Process();
         OUT_L[i]   = sig;
         OUT_R[i]   = sig2;
     }
@@ -295,6 +518,8 @@ int main(void)
     osc.Init(hw.AudioSampleRate());
     sosc.Init(hw.AudioSampleRate());
     wtOsc.Init(hw.AudioSampleRate());
+    additive.Init(hw.AudioSampleRate());
+    sinAdditiveOsc.Init(hw.AudioSampleRate());
 
     osc.SetAmp(0.5f);
     osc.SetFreq(440.f);
@@ -305,6 +530,15 @@ int main(void)
 
     wtOsc.SetFreq(440.f);
     wtOsc.SetAmp(0.5f);
+
+    additive.SetFreq(440.0f);
+    additive.SetAmp(0.5f);
+    //additive.SetHarmonic(2, 0.5f);
+
+    for(int i = 0; i < 48; i++)
+    {
+        additive.SetHarmonic(i, 1.0f / (i + 1));
+    }
 
     hw.StartAudio(AudioCallback);
     while(1) {}
