@@ -7,79 +7,77 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Tue Jul 12 19:55:28 2022
+# Make data base, printed on Sat Aug 13 14:48:55 2022
 
 # Variables
 
+# makefile (from `../../../libDaisy//core/Makefile', line 204)
+DAISY_PID = df11
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# makefile (from `../../../libDaisy//core/Makefile', line 200)
+# makefile (from `../../../libDaisy//core/Makefile', line 212)
 LDSCRIPT = $(SYSTEM_FILES_DIR)/STM32H750IB_flash.lds
-# environment
-VSCODE_LOG_NATIVE = false
 # makefile (from `Makefile', line 5)
 CPP_SOURCES = Drum808.cpp bass_drum.cpp snare_drum.cpp high_hat.cpp fm_drum.cpp
 # makefile (from `Makefile', line 2)
 TARGET = Drum808
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from `../../../libDaisy//core/Makefile', line 183)
-CPPFLAGS = $(CFLAGS) -fno-exceptions -fasm -finline -finline-functions-called-once -fshort-enums -fno-move-loop-invariants -fno-unwind-tables -Wno-register
-# makefile (from `../../../libDaisy//core/Makefile', line 106)
+# makefile (from `../../../libDaisy//core/Makefile', line 180)
+CPPFLAGS = $(CFLAGS) -fno-exceptions -fasm -finline -finline-functions-called-once -fshort-enums -fno-move-loop-invariants -fno-unwind-tables -fno-rtti -Wno-register
+# makefile (from `../../../libDaisy//core/Makefile', line 103)
 AS_DEFS = 
-# makefile (from `../../../libDaisy//core/Makefile', line 128)
+# makefile (from `../../../libDaisy//core/Makefile', line 125)
 AS_INCLUDES = 
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/siavashfathi/Desktop/DaisyExamples/Sia/Init/Drum808
+CURDIR := /Users/siavashfathi/Desktop/DSP/DaisyExamples/Sia/Init/Drum808
 # makefile
 SHELL = /bin/sh
-# makefile (from `../../../libDaisy//core/Makefile', line 87)
+# makefile (from `../../../libDaisy//core/Makefile', line 84)
 BIN = $(CP) -O binary -S
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
-# makefile (from `../../../libDaisy//core/Makefile', line 84)
+# makefile (from `../../../libDaisy//core/Makefile', line 81)
 SZ = $(PREFIX)size
 # environment
 _ = /usr/bin/make
-# makefile (from `../../../libDaisy//core/Makefile', line 180)
+# makefile (from `../../../libDaisy//core/Makefile', line 177)
 CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -Wno-missing-attributes -fasm -fdata-sections -ffunction-sections -Wno-stringop-overflow -g -ggdb -MMD -MP -MF"$(@:%.o=%.d)"
 # makefile (from `build/startup_stm32h750xx.d', line 1)
 MAKEFILE_LIST :=  Makefile ../../../libDaisy//core/Makefile build/Drum808.d build/bass_drum.d build/fm_drum.d build/high_hat.d build/snare_drum.d build/startup_stm32h750xx.d
-# makefile (from `../../../libDaisy//core/Makefile', line 83)
+# makefile (from `../../../libDaisy//core/Makefile', line 80)
 CP = $(PREFIX)objcopy
-# makefile (from `../../../libDaisy//core/Makefile', line 193)
+# makefile (from `../../../libDaisy//core/Makefile', line 191)
 C_STANDARD = -std=gnu11
-# environment
-VSCODE_VERBOSE_LOGGING = true
-# makefile (from `../../../libDaisy//core/Makefile', line 82)
+# makefile (from `../../../libDaisy//core/Makefile', line 79)
 AS = $(PREFIX)gcc -x assembler-with-cpp
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # makefile (from `../../../libDaisy//core/Makefile', line 3)
 CHIPSET = stm32h7x
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/6m/s3sg7_1j6fd3y_dyjh0_rjx00000gn/T/vscode-ipc-19194866-f5b9-4612-8a55-fa2a10ad794a.sock
-# makefile (from `../../../libDaisy//core/Makefile', line 23)
+# makefile (from `../../../libDaisy//core/Makefile', line 20)
 GDB_FLAGS = 
 # environment
 VSCODE_CWD = /
 # environment
 PATH = /Users/siavashfathi/opt/anaconda3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-# makefile (from `../../../libDaisy//core/Makefile', line 194)
+# makefile (from `../../../libDaisy//core/Makefile', line 213)
+USBPID = $(STM_PID)
+# makefile (from `../../../libDaisy//core/Makefile', line 208)
+APP_TYPE = BOOT_NONE
+# makefile (from `../../../libDaisy//core/Makefile', line 192)
 CPP_STANDARD = -std=gnu++14
 # makefile (from `Makefile', line 9)
 DAISYSP_DIR = ../../../DaisySP/
 # environment
-VSCODE_LOG_STACK = false
-# environment
 ELECTRON_RUN_AS_NODE = 1
-# makefile (from `../../../libDaisy//core/Makefile', line 214)
+# makefile (from `../../../libDaisy//core/Makefile', line 250)
 LDFLAGS =  $(MCU) --specs=nano.specs --specs=nosys.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections -Wl,--print-memory-usage
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
@@ -87,17 +85,15 @@ LDFLAGS =  $(MCU) --specs=nano.specs --specs=nosys.specs -T$(LDSCRIPT) $(LIBDIR)
 SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.KrtIWeiLNN/Listeners
 # automatic
 %F = $(notdir $%)
-# makefile (from `../../../libDaisy//core/Makefile', line 32)
+# makefile (from `../../../libDaisy//core/Makefile', line 29)
 OPT = -O2
 # makefile (from `../../../libDaisy//core/Makefile', line 5)
 TARGET_BIN = $(TARGET).bin
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
-PWD = /Users/siavashfathi/Desktop/DaisyExamples/Sia/Init/Drum808
-# makefile (from `../../../libDaisy//core/Makefile', line 9)
+PWD = /Users/siavashfathi/Desktop/DSP/DaisyExamples/Sia/Init/Drum808
+# makefile (from `../../../libDaisy//core/Makefile', line 200)
 QSPI_ADDRESS = 0x90040000
-# makefile (from `../../../libDaisy//core/Makefile', line 81)
+# makefile (from `../../../libDaisy//core/Makefile', line 78)
 GDB = $(PREFIX)gdb
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
@@ -108,20 +104,20 @@ HOME = /Users/siavashfathi
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/siavashfathi/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /Users/siavashfathi/Library/Application Support/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
 # environment
 LOGNAME = siavashfathi
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# makefile (from `../../../libDaisy//core/Makefile', line 19)
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# makefile (from `../../../libDaisy//core/Makefile', line 16)
 OCD_DIR = /usr/local/share/openocd/scripts
-# makefile (from `../../../libDaisy//core/Makefile', line 68)
+# makefile (from `../../../libDaisy//core/Makefile', line 65)
 PREFIX = arm-none-eabi-
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
-# makefile (from `../../../libDaisy//core/Makefile', line 116)
+# makefile (from `../../../libDaisy//core/Makefile', line 113)
 C_DEFS =  -DUSE_HAL_DRIVER -DSTM32H750xx -DHSE_VALUE=16000000  -DCORE_CM7 -DSTM32H750IB -DARM_MATH_CM7 -DUSE_FULL_LL_DRIVER
 # environment
 XPC_FLAGS = 0x0
@@ -131,15 +127,17 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
-# makefile (from `../../../libDaisy//core/Makefile', line 99)
+# makefile (from `../../../libDaisy//core/Makefile', line 96)
 FLOAT-ABI = -mfloat-abi=hard
-# makefile (from `../../../libDaisy//core/Makefile', line 86)
+# makefile (from `../../../libDaisy//core/Makefile', line 83)
 HEX = $(CP) -O ihex
-# makefile (from `../../../libDaisy//core/Makefile', line 79)
+# makefile (from `../../../libDaisy//core/Makefile', line 76)
 CC = $(PREFIX)gcc
-# makefile (from `../../../libDaisy//core/Makefile', line 41)
+# makefile (from `../../../libDaisy//core/Makefile', line 205)
+STM_PID = df11
+# makefile (from `../../../libDaisy//core/Makefile', line 38)
 BUILD_DIR = build
-# makefile (from `../../../libDaisy//core/Makefile', line 169)
+# makefile (from `../../../libDaisy//core/Makefile', line 166)
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 # default
 MAKE_VERSION := 3.81
@@ -147,19 +145,21 @@ MAKE_VERSION := 3.81
 USER = siavashfathi
 # makefile
 .DEFAULT_GOAL := all
+# makefile (from `../../../libDaisy//core/Makefile', line 199)
+INTERNAL_ADDRESS = 0x08000000
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
-# makefile (from `../../../libDaisy//core/Makefile', line 210)
+# makefile (from `../../../libDaisy//core/Makefile', line 246)
 LIBDIR = -L$(LIBDAISY_DIR)/build -L $(DAISYSP_DIR)/build
-# makefile (from `../../../libDaisy//core/Makefile', line 93)
+# makefile (from `../../../libDaisy//core/Makefile', line 90)
 CPU = -mcpu=cortex-m7
-# makefile (from `../../../libDaisy//core/Makefile', line 96)
+# makefile (from `../../../libDaisy//core/Makefile', line 93)
 FPU = -mfpu=fpv5-d16
-# makefile (from `../../../libDaisy//core/Makefile', line 20)
+# makefile (from `../../../libDaisy//core/Makefile', line 17)
 PGM_DEVICE = interface/stlink.cfg
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
-# makefile (from `../../../libDaisy//core/Makefile', line 7)
+# makefile (from `../../../libDaisy//core/Makefile', line 207)
 BOOT_BIN = $(wildcard $(SYSTEM_FILES_DIR)/dsy_bootloader*)
 # default
 .VARIABLES := 
@@ -168,45 +168,47 @@ TMPDIR = /var/folders/6m/s3sg7_1j6fd3y_dyjh0_rjx00000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/siavashfathi/Library/Application Support/Code/1.68.1-main.sock
+VSCODE_IPC_HOOK = /Users/siavashfathi/Library/Application Support/Code/1.70.1-main.sock
+# environment
+MallocNanoZone = 0
 # makefile
 MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# makefile (from `../../../libDaisy//core/Makefile', line 18)
+# makefile (from `../../../libDaisy//core/Makefile', line 15)
 OCD = openocd
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.9625022.9625028
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.10342996.10343002
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # makefile (from `../../../libDaisy//core/Makefile', line 6)
 TARGET_ELF = $(TARGET).elf
 # automatic
 +F = $(notdir $+)
-# makefile (from `../../../libDaisy//core/Makefile', line 8)
-FLASH_ADDRESS = 0x08000000
-# makefile (from `../../../libDaisy//core/Makefile', line 102)
+# makefile (from `../../../libDaisy//core/Makefile', line 214)
+FLASH_ADDRESS = $(INTERNAL_ADDRESS)
+# makefile (from `../../../libDaisy//core/Makefile', line 99)
 MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
-# makefile (from `../../../libDaisy//core/Makefile', line 166)
+# makefile (from `../../../libDaisy//core/Makefile', line 163)
 C_INCLUDES = -include stm32h7xx.h -I$(LIBDAISY_DIR) -I$(LIBDAISY_DIR)/src/ -I$(LIBDAISY_DIR)/src/sys -I$(LIBDAISY_DIR)/src/usbd -I$(LIBDAISY_DIR)/src/usbh -I$(LIBDAISY_DIR)/Drivers/CMSIS/Include/ -I$(LIBDAISY_DIR)/Drivers/CMSIS/DSP/Include -I$(LIBDAISY_DIR)/Drivers/CMSIS/Device/ST/STM32H7xx/Include -I$(LIBDAISY_DIR)/Drivers/STM32H7xx_HAL_Driver/Inc/ -I$(LIBDAISY_DIR)/Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I$(LIBDAISY_DIR)/Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I$(LIBDAISY_DIR)/Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I$(SYSTEM_FILES_DIR)/ -I$(DAISYSP_DIR)/Source -I$(FATFS_DIR)
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
 # environment
 COMMAND_MODE = unix2003
-# makefile (from `../../../libDaisy//core/Makefile', line 155)
+ 
+# makefile (from `../../../libDaisy//core/Makefile', line 152)
 FATFS_DIR = $(LIBDAISY_DIR)/Middlewares/Third_Party/FatFs/src
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
- 
-# makefile (from `../../../libDaisy//core/Makefile', line 21)
+# makefile (from `../../../libDaisy//core/Makefile', line 18)
 OCDFLAGS = -f $(PGM_DEVICE) -f target/$(CHIPSET).cfg
-# makefile (from `../../../libDaisy//core/Makefile', line 80)
+# makefile (from `../../../libDaisy//core/Makefile', line 77)
 CXX = $(PREFIX)g++ 
-# makefile (from `../../../libDaisy//core/Makefile', line 157)
+# makefile (from `../../../libDaisy//core/Makefile', line 154)
 FATFS_SOURCES =  $(FATFS_DIR)/diskio.c $(FATFS_DIR)/ff.c $(FATFS_DIR)/ff_gen_drv.c $(FATFS_DIR)/option/ccsbcs.c
 # environment
 LC_ALL = C
@@ -214,11 +216,11 @@ LC_ALL = C
 SYSTEM_FILES_DIR = $(LIBDAISY_DIR)/core
 # makefile (from `Makefile', line 8)
 LIBDAISY_DIR = ../../../libDaisy/
-# makefile (from `../../../libDaisy//core/Makefile', line 209)
+# makefile (from `../../../libDaisy//core/Makefile', line 245)
 LIBS = -ldaisy -lc -lm -lnosys -ldaisysp
 # automatic
 ^F = $(notdir $^)
-# makefile (from `../../../libDaisy//core/Makefile', line 55)
+# makefile (from `../../../libDaisy//core/Makefile', line 52)
 C_SOURCES = $(SYSTEM_FILES_DIR)/startup_stm32h750xx.c
 # default
 SUFFIXES := 
@@ -226,14 +228,14 @@ SUFFIXES :=
 .INCLUDE_DIRS = /usr/local/include
 # environment
 MAKELEVEL := 0
-# makefile (from `../../../libDaisy//core/Makefile', line 228)
+# makefile (from `../../../libDaisy//core/Makefile', line 264)
 OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o))) $(addprefix $(BUILD_DIR)/,$(notdir $(CPP_SOURCES:.cpp=.o))) $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.s=.o)))
 # environment
 LANG = C
 # environment
-VSCODE_PID = 9069
+VSCODE_PID = 63258
 # variable set hash-table stats:
-# Load=110/1024=11%, Rehash=0, Collisions=23/241=10%
+# Load=111/1024=11%, Rehash=0, Collisions=22/245=9%
 
 # Pattern-specific Variable Values
 
@@ -241,36 +243,36 @@ VSCODE_PID = 9069
 
 # Directories
 
-# . (device 16777221, inode 9851613): 20 files, no impossibilities.
-# build (device 16777221, inode 9869409): 24 files, no impossibilities.
-# ../../../libDaisy//core (device 16777221, inode 9034440): 9 files, no impossibilities.
+# . (device 16777221, inode 10327996): 21 files, no impossibilities.
+# build (device 16777221, inode 10350022): 24 files, no impossibilities.
+# ../../../libDaisy//core (device 16777221, inode 10314552): 9 files, no impossibilities.
 
-# 53 files, no impossibilities in 3 directories.
+# 54 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 build/%.o: %.c Makefile | build
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 232):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 268):
 	$(CC) -c $(CFLAGS) $(C_STANDARD) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 	
 
 build/%.o: %.cpp Makefile | build
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 235):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 271):
 	$(CXX) -c $(CPPFLAGS) $(CPP_STANDARD) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.cpp=.lst)) $< -o $@
 	
 
 build/%.o: %.s Makefile | build
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 238):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 274):
 	$(AS) -c $(ASFLAGS) $< -o $@
 	
 
 build/%.hex: build/%.elf | build
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 244):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 280):
 	$(HEX) $< $@
 	
 
 build/%.bin: build/%.elf | build
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 247):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 283):
 	$(BIN) $< $@
 	
 
@@ -280,7 +282,7 @@ build/%.bin: build/%.elf | build
 
 ../../../libDaisy//src/sys/ffconf.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -288,7 +290,7 @@ build/%.bin: build/%.elf | build
 
 ../../../libDaisy//src/per/uart.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -296,7 +298,7 @@ build/%.bin: build/%.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -304,7 +306,7 @@ build/%.bin: build/%.elf | build
 
 ../../../libDaisy//src/dev/sr_4021.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -312,7 +314,7 @@ build/%.bin: build/%.elf | build
 
 ../../../libDaisy//src/util/oled_fonts.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -329,7 +331,7 @@ high_hat.cpp:
 
 ../../../libDaisy//src/ui/PotMonitor.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -339,7 +341,7 @@ high_hat.cpp:
 build/snare_drum.d:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 23:02:34
+#  Last modified 2022-08-13 12:36:02
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -349,7 +351,7 @@ build/snare_drum.d:
 build/fm_drum.d:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 23:02:36
+#  Last modified 2022-08-13 12:36:03
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -357,7 +359,7 @@ build/fm_drum.d:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -373,7 +375,7 @@ fm_drum.h:
 
 ../../../libDaisy//src/util/WaveTableLoader.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -383,14 +385,14 @@ program:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 281):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 318):
 	$(OCD) -s $(OCD_DIR) $(OCDFLAGS) \
 	-c "program ./build/$(TARGET).elf verify reset exit"
 	
 
 ../../../libDaisy//src/dev/codec_wm8731.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -398,7 +400,7 @@ program:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -406,7 +408,7 @@ program:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -414,7 +416,7 @@ program:
 
 ../../../libDaisy//src/sys/stm32h7xx_hal_conf.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -422,7 +424,7 @@ program:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -430,7 +432,15 @@ program:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+../../../libDaisy//src/dev/icm20948.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -440,13 +450,14 @@ debug_client:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 278):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 314):
+ 
 	ddd --eval-command="target remote localhost:3333" --debugger $(GDB) $(TARGET_ELF)
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -454,8 +465,7 @@ debug_client:
 
 ../../../libDaisy//src/per/rng.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
- 
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -463,7 +473,7 @@ debug_client:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -471,7 +481,7 @@ debug_client:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -479,7 +489,7 @@ debug_client:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -487,7 +497,7 @@ debug_client:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -504,7 +514,7 @@ all: build/Drum808.elf build/Drum808.hex build/Drum808.bin
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -521,7 +531,7 @@ fm_drum.cpp:
 
 ../../../libDaisy//src/ui/../util/Stack.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -529,7 +539,7 @@ fm_drum.cpp:
 
 ../../../libDaisy//src/per/gpio.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -539,13 +549,21 @@ openocd:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 263):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 299):
 	$(OCD) -s $(OCD_DIR) $(OCDFLAGS)
 	
 
+../../../libDaisy//src/dev/dps310.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 10:01:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
 ../../../libDaisy//src/hid/switch.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -553,7 +571,7 @@ openocd:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -561,7 +579,7 @@ openocd:
 
 ../../../libDaisy//src/ui/UI.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -569,7 +587,7 @@ openocd:
 
 ../../../libDaisy//src/dev/sdram.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -577,7 +595,7 @@ openocd:
 
 ../../../libDaisy//src/per/sdmmc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -587,7 +605,7 @@ openocd:
 build/high_hat.d:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 23:02:35
+#  Last modified 2022-08-13 12:36:02
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -603,7 +621,7 @@ svf.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -611,7 +629,7 @@ svf.h:
 
 ../../../libDaisy//src/util/ringbuffer.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -619,7 +637,7 @@ svf.h:
 
 ../../../libDaisy//src/util/CpuLoadMeter.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -627,7 +645,7 @@ svf.h:
 
 ../../../libDaisy//src/hid/encoder.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -635,7 +653,7 @@ svf.h:
 
 ../../../libDaisy//src/daisy_patch_sm.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -643,7 +661,7 @@ svf.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -651,7 +669,7 @@ svf.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -659,7 +677,7 @@ svf.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -667,7 +685,7 @@ svf.h:
 
 ../../../libDaisy//src/hid/disp/graphics_common.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -677,8 +695,8 @@ program-dfu:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 289):
-	dfu-util -a 0 -s $(FLASH_ADDRESS):leave -D $(BUILD_DIR)/$(TARGET_BIN) -d ,0483:df11
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 330):
+	dfu-util -a 0 -s $(FLASH_ADDRESS):leave -D $(BUILD_DIR)/$(TARGET_BIN) -d ,0483:$(USBPID)
 	
 
 snare_drum.h:
@@ -692,8 +710,9 @@ snare_drum.h:
 # Not a target:
 build/startup_stm32h750xx.d:
 #  A default, MAKEFILES, or -include/sinclude makefile.
+ 
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 23:02:32
+#  Last modified 2022-08-13 12:35:59
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -701,7 +720,7 @@ build/startup_stm32h750xx.d:
 
 ../../../libDaisy//src/ui/../sys/system.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -709,29 +728,28 @@ build/startup_stm32h750xx.d:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sram.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 build/Drum808.o: Drum808.cpp Makefile Drum808.cpp ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_compiler.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_gcc.h ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h ../../../libDaisy//src/sys/stm32h7xx_hal_conf.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dcmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cec.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_comp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hrtim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nor.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nand.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_iwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdios.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_lptim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rng.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spdifrx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_swpmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_wwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h ../../../libDaisy//src/daisy_patch_sm.h ../../../libDaisy//src/daisy.h ../../../libDaisy//src/daisy_core.h ../../../libDaisy//src/version.h ../../../libDaisy//src/sys/system.h ../../../libDaisy//src/per/tim.h ../../../libDaisy//src/per/qspi.h ../../../libDaisy/ 
-/src/per/dac.h ../../../libDaisy//src/per/gpio.h ../../../libDaisy//src/dev/leddriver.h ../../../libDaisy//src/per/i2c.h ../../../libDaisy//src/dev/sdram.h ../../../libDaisy//src/dev/sr_4021.h ../../../libDaisy//src/sys/system.h ../../../libDaisy//src/hid/audio.h ../../../libDaisy//src/per/sai.h ../../../libDaisy//src/util/unique_id.h ../../../libDaisy//src/per/adc.h ../../../libDaisy//src/per/uart.h ../../../libDaisy//src/hid/midi.h ../../../libDaisy//src/util/ringbuffer.h ../../../libDaisy//src/hid/MidiEvent.h ../../../libDaisy//src/hid/usb_midi.h ../../../libDaisy//src/hid/usb.h ../../../libDaisy//src/hid/encoder.h ../../../libDaisy//src/hid/switch.h ../../../libDaisy//src/hid/switch3.h ../../../libDaisy//src/hid/ctrl.h ../../../libDaisy//src/hid/gatein.h ../../../libDaisy//src/hid/parameter.h ../../../libDaisy//src/hid/logger.h ../../../libDaisy//src/hid/logger_impl.h ../../../libDaisy//src/hid/usb_host.h ../../../libDaisy//src/per/sdmmc.h ../../../libDaisy//src/per/spi.h ../../../libDaisy//src/per/spiMultislave.h ../../../libDaisy//src/per/rng.h ../../../libDaisy//src/hid/disp/display.h ../../../libDaisy//src/util/oled_fonts.h ../../../libDaisy//src/hid/disp/graphics_common.h ../../../libDaisy//src/hid/disp/oled_display.h ../../../libDaisy//src/hid/wavplayer.h ../../../libDaisy//src/util/wav_format.h ../../../libDaisy//Middlewares/Third_Party/FatFs/src/ff.h ../../../libDaisy//Middlewares/Third_Party/FatFs/src/integer.h ../../../libDaisy//src/sys/ffconf.h ../../../libDaisy//src/util/bsp_sd_diskio.h ../../../libDaisy//src/hid/led.h ../../../libDaisy//src/hid/rgb_led.h ../../../libDaisy//src/util/color.h ../../../libDaisy//src/dev/sr_595.h ../../../libDaisy//src/dev/codec_pcm3060.h ../../../libDaisy//src/dev/codec_wm8731.h ../../../libDaisy//src/dev/lcd_hd44780.h ../../../libDaisy//src/dev/mcp23x17.h ../../../libDaisy//src/dev/max11300.h ../../../libDaisy//src/ui/ButtonMonitor.h ../../../libDaisy//src/ui/UiEventQueue.h ../../../libDaisy//src/ui/../util/FIFO.h ../../../libDaisy//src/ui/../util/scopedirqblocker.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_gcc.h ../../../libDaisy//src/ui/../sys/system.h ../../../libDaisy//src/ui/PotMonitor.h ../../../libDaisy//src/ui/UI.h ../../../libDaisy//src/ui/../util/Stack.h ../../../libDaisy//src/ui/AbstractMenu.h ../../../libDaisy//src/util/MappedValue.h ../../../libDaisy//src/util/FixedCapStr.h ../../../libDaisy//src/ui/FullScreenItemMenu.h ../../../libDaisy//src/util/CpuLoadMeter.h ../../../libDaisy//src/util/PersistentStorage.h ../../../libDaisy//src/per/qspi.h ../../../libDaisy//src/util/VoctCalibration.h ../../../libDaisy//src/util/WaveTableLoader.h ../../../libDaisy//src/sys/fatfs.h ../../../libDaisy//src/util/WavWriter.h bass_drum.h svf.h resources.h excitation.h snare_drum.h high_hat.h fm_drum.h | build
+/src/per/dac.h ../../../libDaisy//src/per/gpio.h ../../../libDaisy//src/dev/leddriver.h ../../../libDaisy//src/per/i2c.h ../../../libDaisy//src/dev/mpr121.h ../../../libDaisy//src/dev/sdram.h ../../../libDaisy//src/dev/sr_4021.h ../../../libDaisy//src/sys/system.h ../../../libDaisy//src/hid/audio.h ../../../libDaisy//src/per/sai.h ../../../libDaisy//src/util/unique_id.h ../../../libDaisy//src/per/adc.h ../../../libDaisy//src/per/uart.h ../../../libDaisy//src/hid/midi.h ../../../libDaisy//src/util/ringbuffer.h ../../../libDaisy//src/hid/MidiEvent.h ../../../libDaisy//src/hid/usb_midi.h ../../../libDaisy//src/hid/usb.h ../../../libDaisy//src/hid/encoder.h ../../../libDaisy//src/hid/switch.h ../../../libDaisy//src/hid/switch3.h ../../../libDaisy//src/hid/ctrl.h ../../../libDaisy//src/hid/gatein.h ../../../libDaisy//src/hid/parameter.h ../../../libDaisy//src/hid/logger.h ../../../libDaisy//src/hid/logger_impl.h ../../../libDaisy//src/hid/usb_host.h ../../../libDaisy//src/per/sdmmc.h ../../../libDaisy//src/per/spi.h ../../../libDaisy//src/per/spiMultislave.h ../../../libDaisy//src/per/rng.h ../../../libDaisy//src/hid/disp/display.h ../../../libDaisy//src/util/oled_fonts.h ../../../libDaisy//src/hid/disp/graphics_common.h ../../../libDaisy//src/hid/disp/oled_display.h ../../../libDaisy//src/hid/wavplayer.h ../../../libDaisy//src/util/wav_format.h ../../../libDaisy//Middlewares/Third_Party/FatFs/src/ff.h ../../../libDaisy//Middlewares/Third_Party/FatFs/src/integer.h ../../../libDaisy//src/sys/ffconf.h ../../../libDaisy//src/util/bsp_sd_diskio.h ../../../libDaisy//src/hid/led.h ../../../libDaisy//src/hid/rgb_led.h ../../../libDaisy//src/util/color.h ../../../libDaisy//src/dev/sr_595.h ../../../libDaisy//src/dev/apds9960.h ../../../libDaisy//src/dev/codec_pcm3060.h ../../../libDaisy//src/dev/codec_wm8731.h ../../../libDaisy//src/dev/dps310.h ../../../libDaisy//src/dev/lcd_hd44780.h ../../../libDaisy//src/dev/mcp23x17.h ../../../libDaisy//src/dev/max11300.h ../../../libDaisy//src/dev/tlv493d.h ../../../libDaisy//src/dev/neopixel.h ../../../libDaisy//src/dev/neotrellis.h ../../../libDaisy//src/dev/icm20948.h ../../../libDaisy//src/ui/ButtonMonitor.h ../../../libDaisy//src/ui/UiEventQueue.h ../../../libDaisy//src/ui/../util/FIFO.h ../../../libDaisy//src/ui/../util/scopedirqblocker.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_gcc.h ../../../libDaisy//src/ui/../sys/system.h ../../../libDaisy//src/ui/PotMonitor.h ../../../libDaisy//src/ui/UI.h ../../../libDaisy//src/ui/../util/Stack.h ../../../libDaisy//src/ui/AbstractMenu.h ../../../libDaisy//src/util/MappedValue.h ../../../libDaisy//src/util/FixedCapStr.h ../../../libDaisy//src/ui/FullScreenItemMenu.h ../../../libDaisy//src/util/CpuLoadMeter.h ../../../libDaisy//src/util/PersistentStorage.h ../../../libDaisy//src/per/qspi.h ../../../libDaisy//src/util/VoctCalibration.h ../../../libDaisy//src/util/WaveTableLoader.h ../../../libDaisy//src/sys/fatfs.h ../../../libDaisy//src/util/WavWriter.h bass_drum.h svf.h resources.h excitation.h snare_drum.h high_hat.h fm_drum.h | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `Drum808'
-#  Last modified 2022-07-08 23:02:33
+#  Last modified 2022-08-13 12:36:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 235):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 271):
 	$(CXX) -c $(CPPFLAGS) $(CPP_STANDARD) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.cpp=.lst)) $< -o $@
 	
 
 ../../../libDaisy//src/per/qspi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -740,18 +758,18 @@ build/Drum808.o: Drum808.cpp Makefile Drum808.cpp ../../../libDaisy//Drivers/CMS
 build/Drum808.hex: build/Drum808.elf | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `Drum808'
-#  Last modified 2022-07-08 23:02:36
+#  Last modified 2022-08-13 12:36:04
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 244):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 280):
 	$(HEX) $< $@
 	
 
 ../../../libDaisy//src/per/sai.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -759,7 +777,7 @@ build/Drum808.hex: build/Drum808.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nor.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -767,7 +785,7 @@ build/Drum808.hex: build/Drum808.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -775,7 +793,7 @@ build/Drum808.hex: build/Drum808.elf | build
 
 ../../../libDaisy//src/sys/system.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -789,7 +807,7 @@ build/Drum808.hex: build/Drum808.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -806,7 +824,7 @@ snare_drum.cpp:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -814,7 +832,7 @@ snare_drum.cpp:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -822,7 +840,7 @@ snare_drum.cpp:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -830,7 +848,7 @@ snare_drum.cpp:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -847,7 +865,7 @@ Makefile:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -855,7 +873,7 @@ Makefile:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -863,7 +881,7 @@ Makefile:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -871,18 +889,18 @@ Makefile:
 
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
+ 
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 ../../../libDaisy//src/util/color.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
- 
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -890,7 +908,7 @@ debug:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 266):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 302):
 	@if ! nc -z localhost 3333; then \
 	echo "\n\t[Error] OpenOCD is not running! Start it with: 'make openocd'\n"; exit 1; \
 	else \
@@ -905,7 +923,7 @@ debug:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -913,7 +931,7 @@ debug:
 
 ../../../libDaisy//src/hid/gatein.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -921,7 +939,7 @@ debug:
 
 ../../../libDaisy//src/dev/codec_pcm3060.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -929,7 +947,7 @@ debug:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -939,18 +957,18 @@ build/snare_drum.o: snare_drum.cpp Makefile snare_drum.cpp ../../../libDaisy//Dr
 c/stm32h7xx_hal_usart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_wwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h snare_drum.h svf.h resources.h excitation.h | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `snare_drum'
-#  Last modified 2022-07-08 23:02:34
+#  Last modified 2022-08-13 12:36:02
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 235):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 271):
 	$(CXX) -c $(CPPFLAGS) $(CPP_STANDARD) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.cpp=.lst)) $< -o $@
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -958,7 +976,7 @@ c/stm32h7xx_hal_usart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/s
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -966,23 +984,15 @@ c/stm32h7xx_hal_usart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/s
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-program-app:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 292):
-	dfu-util -a 0 -s $(QSPI_ADDRESS):leave -D $(BUILD_DIR)/$(TARGET_BIN) -d ,0483:df11
-	
-
 ../../../libDaisy//src/hid/disp/oled_display.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -990,16 +1000,16 @@ program-app:
 
 build:
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-08 23:02:40
+#  Last modified 2022-08-13 12:36:13
 #  File has been updated.
 #  Successfully updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 250):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 286):
 	mkdir $@
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1007,7 +1017,7 @@ build:
 
 ../../../libDaisy//src/util/WavWriter.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1015,7 +1025,7 @@ build:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1023,7 +1033,7 @@ build:
 
 ../../../libDaisy//src/ui/UiEventQueue.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1031,7 +1041,7 @@ build:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1039,7 +1049,7 @@ build:
 
 ../../../libDaisy//src/hid/MidiEvent.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1047,7 +1057,7 @@ build:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdios.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1055,7 +1065,7 @@ build:
 
 ../../../libDaisy//src/util/MappedValue.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1063,7 +1073,7 @@ build:
 
 ../../../libDaisy//src/hid/rgb_led.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1071,7 +1081,7 @@ build:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1079,7 +1089,7 @@ build:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1087,18 +1097,18 @@ build:
 
 build/Drum808.elf: build/startup_stm32h750xx.o build/Drum808.o build/bass_drum.o build/snare_drum.o build/high_hat.o build/fm_drum.o Makefile
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-08 23:02:36
+#  Last modified 2022-08-13 12:36:04
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 241):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 277):
 	$(CXX) $(OBJECTS) $(LDFLAGS) -o $@
 	
 
 ../../../libDaisy//src/util/VoctCalibration.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1106,7 +1116,7 @@ build/Drum808.elf: build/startup_stm32h750xx.o build/Drum808.o build/bass_drum.o
 
 ../../../libDaisy//src/hid/usb.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1114,7 +1124,15 @@ build/Drum808.elf: build/startup_stm32h750xx.o build/Drum808.o build/bass_drum.o
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+../../../libDaisy//src/dev/mpr121.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1122,7 +1140,7 @@ build/Drum808.elf: build/startup_stm32h750xx.o build/Drum808.o build/bass_drum.o
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cec.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1130,7 +1148,7 @@ build/Drum808.elf: build/startup_stm32h750xx.o build/Drum808.o build/bass_drum.o
 
 ../../../libDaisy//src/dev/sr_595.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1138,7 +1156,7 @@ build/Drum808.elf: build/startup_stm32h750xx.o build/Drum808.o build/bass_drum.o
 
 ../../../libDaisy//src/per/i2c.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1148,18 +1166,18 @@ build/Drum808.elf: build/startup_stm32h750xx.o build/Drum808.o build/bass_drum.o
 build/high_hat.o: high_hat.cpp Makefile high_hat.cpp ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_compiler.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_gcc.h ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h ../../../libDaisy//src/sys/stm32h7xx_hal_conf.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dcmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cec.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_comp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hrtim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nor.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nand.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_iwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdios.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_lptim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rng.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spdifrx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_swpmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_wwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h high_hat.h svf.h resources.h excitation.h | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `high_hat'
-#  Last modified 2022-07-08 23:02:35
+#  Last modified 2022-08-13 12:36:03
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 235):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 271):
 	$(CXX) -c $(CPPFLAGS) $(CPP_STANDARD) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.cpp=.lst)) $< -o $@
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1167,7 +1185,7 @@ build/high_hat.o: high_hat.cpp Makefile high_hat.cpp ../../../libDaisy//Drivers/
 
 ../../../libDaisy//src/hid/parameter.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1175,7 +1193,7 @@ build/high_hat.o: high_hat.cpp Makefile high_hat.cpp ../../../libDaisy//Drivers/
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1185,18 +1203,18 @@ build/high_hat.o: high_hat.cpp Makefile high_hat.cpp ../../../libDaisy//Drivers/
 build/startup_stm32h750xx.o: ../../../libDaisy//core/startup_stm32h750xx.c Makefile ../../../libDaisy//core/startup_stm32h750xx.c ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_compiler.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_gcc.h ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h ../../../libDaisy//src/sys/stm32h7xx_hal_conf.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dcmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cec.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_comp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hrtim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nor.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nand.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_iwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdios.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_lptim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rng.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spdifrx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_swpmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_wwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `startup_stm32h750xx'
-#  Last modified 2022-07-08 23:02:32
+#  Last modified 2022-08-13 12:35:59
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 232):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 268):
 	$(CC) -c $(CFLAGS) $(C_STANDARD) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.c=.lst)) $< -o $@
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1204,7 +1222,7 @@ build/startup_stm32h750xx.o: ../../../libDaisy//core/startup_stm32h750xx.c Makef
 
 ../../../libDaisy//src/hid/ctrl.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1212,7 +1230,7 @@ build/startup_stm32h750xx.o: ../../../libDaisy//core/startup_stm32h750xx.c Makef
 
 ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
  
@@ -1222,18 +1240,18 @@ build/startup_stm32h750xx.o: ../../../libDaisy//core/startup_stm32h750xx.c Makef
 build/Drum808.bin: build/Drum808.elf | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `Drum808'
-#  Last modified 2022-07-08 23:02:36
+#  Last modified 2022-08-13 12:36:04
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 247):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 283):
 	$(BIN) $< $@
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1241,7 +1259,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//src/per/spiMultislave.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1249,7 +1267,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//src/util/unique_id.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1257,7 +1275,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//src/ui/FullScreenItemMenu.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1265,7 +1283,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1273,7 +1291,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//src/dev/mcp23x17.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1281,7 +1299,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1289,7 +1307,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1297,7 +1315,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1305,7 +1323,15 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+../../../libDaisy//src/dev/apds9960.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1313,7 +1339,7 @@ build/Drum808.bin: build/Drum808.elf | build
 
 ../../../libDaisy//src/per/adc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1323,7 +1349,7 @@ build/Drum808.bin: build/Drum808.elf | build
 build/bass_drum.d:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 23:02:34
+#  Last modified 2022-08-13 12:36:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1332,7 +1358,7 @@ build/bass_drum.d:
 # Not a target:
 ../../../libDaisy//core/Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1340,7 +1366,7 @@ build/bass_drum.d:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_swpmi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1348,7 +1374,7 @@ build/bass_drum.d:
 
 ../../../libDaisy//src/hid/audio.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1356,7 +1382,7 @@ build/bass_drum.d:
 
 ../../../libDaisy//src/hid/led.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1364,7 +1390,7 @@ build/bass_drum.d:
 
 ../../../libDaisy//src/hid/logger_impl.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1372,7 +1398,7 @@ build/bass_drum.d:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1380,7 +1406,7 @@ build/bass_drum.d:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dcmi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1396,7 +1422,7 @@ high_hat.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1410,7 +1436,7 @@ high_hat.h:
 
 ../../../libDaisy//src/ui/../util/scopedirqblocker.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1418,7 +1444,7 @@ high_hat.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1426,7 +1452,7 @@ high_hat.h:
 
 ../../../libDaisy//src/version.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1434,7 +1460,7 @@ high_hat.h:
 
 ../../../libDaisy//src/per/spi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1442,7 +1468,7 @@ high_hat.h:
 
 ../../../libDaisy//src/hid/disp/display.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1450,7 +1476,7 @@ high_hat.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1458,24 +1484,24 @@ high_hat.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
  
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
+../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 10:01:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
 ../../../libDaisy//src/dev/max11300.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1491,7 +1517,7 @@ resources.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_comp.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1499,7 +1525,7 @@ resources.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1507,7 +1533,7 @@ resources.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1515,7 +1541,7 @@ resources.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_lptim.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1523,7 +1549,7 @@ resources.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1539,7 +1565,7 @@ excitation.h:
 
 ../../../libDaisy//Middlewares/Third_Party/FatFs/src/integer.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1549,13 +1575,13 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 256):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 292):
 	-rm -fR $(BUILD_DIR)
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1563,7 +1589,7 @@ clean:
 
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1571,7 +1597,7 @@ clean:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1579,7 +1605,7 @@ clean:
 
 ../../../libDaisy//src/daisy_core.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1587,7 +1613,7 @@ clean:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1595,7 +1621,7 @@ clean:
 
 ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1603,7 +1629,7 @@ clean:
 
 ../../../libDaisy//src/sys/fatfs.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1611,7 +1637,7 @@ clean:
 
 ../../../libDaisy//src/ui/ButtonMonitor.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1619,7 +1645,7 @@ clean:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1627,7 +1653,7 @@ clean:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1637,18 +1663,18 @@ build/fm_drum.o: fm_drum.cpp Makefile fm_drum.cpp ../../../libDaisy//Drivers/CMS
 y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cec.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_comp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hrtim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nor.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nand.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_iwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdios.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_lptim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rng.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spdifrx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_swpmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_wwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h fm_drum.h resources.h | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `fm_drum'
-#  Last modified 2022-07-08 23:02:36
+#  Last modified 2022-08-13 12:36:03
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 235):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 271):
 	$(CXX) -c $(CPPFLAGS) $(CPP_STANDARD) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.cpp=.lst)) $< -o $@
 	
 
 ../../../libDaisy//src/hid/midi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1656,7 +1682,7 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nand.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1664,7 +1690,7 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hrtim.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1672,7 +1698,7 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//Drivers/CMSIS/Include/cmsis_gcc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1680,7 +1706,7 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1688,7 +1714,7 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//src/hid/wavplayer.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1696,7 +1722,15 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//src/util/wav_format.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+../../../libDaisy//src/dev/neotrellis.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1704,7 +1738,7 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1712,7 +1746,7 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_iwdg.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1720,10 +1754,11 @@ y//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Driver
 
 ../../../libDaisy//src/util/FixedCapStr.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
@@ -1735,10 +1770,9 @@ Drum808.cpp:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
- 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1746,7 +1780,7 @@ Drum808.cpp:
 
 ../../../libDaisy//src/dev/lcd_hd44780.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1755,27 +1789,35 @@ Drum808.cpp:
 build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h ../../../libDaisy//Drivers/CMSIS/Include/core_cm7.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_compiler.h ../../../libDaisy//Drivers/CMSIS/Include/cmsis_gcc.h ../../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h ../../../libDaisy//src/sys/stm32h7xx_hal_conf.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dcmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_eth_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cec.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_comp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cryp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dac_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hrtim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nor.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_nand.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_iwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdios.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_lptim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_opamp_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rng.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spdifrx.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_swpmi.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_usart_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smartcard_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_wwdg.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h bass_drum.h svf.h resources.h excitation.h | build
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `bass_drum'
-#  Last modified 2022-07-08 23:02:34
+#  Last modified 2022-08-13 12:36:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 235):
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 271):
 	$(CXX) -c $(CPPFLAGS) $(CPP_STANDARD) -Wa,-a,-ad,-alms=$(BUILD_DIR)/$(notdir $(<:.cpp=.lst)) $< -o $@
+ 
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 ../../../libDaisy//src/per/dac.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+../../../libDaisy//src/dev/tlv493d.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1783,7 +1825,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 
 ../../../libDaisy//src/hid/usb_host.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1791,7 +1833,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1799,7 +1841,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 
 ../../../libDaisy//src/hid/usb_midi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1808,7 +1850,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 # Not a target:
 ../../../libDaisy//core/startup_stm32h750xx.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1816,7 +1858,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1824,7 +1866,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spdifrx.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1832,7 +1874,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 
 ../../../libDaisy//src/per/tim.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1840,7 +1882,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1848,7 +1890,7 @@ build/bass_drum.o: bass_drum.cpp Makefile bass_drum.cpp ../../../libDaisy//Drive
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1864,7 +1906,7 @@ bass_drum.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1872,7 +1914,7 @@ bass_drum.h:
 
 ../../../libDaisy//Middlewares/Third_Party/FatFs/src/ff.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1880,7 +1922,7 @@ bass_drum.h:
 
 ../../../libDaisy//src/ui/AbstractMenu.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1888,7 +1930,7 @@ bass_drum.h:
 
 ../../../libDaisy//src/util/bsp_sd_diskio.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1896,7 +1938,7 @@ bass_drum.h:
 
 ../../../libDaisy//src/daisy.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1904,7 +1946,7 @@ bass_drum.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_irda_ex.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1912,7 +1954,7 @@ bass_drum.h:
 
 ../../../libDaisy//Drivers/CMSIS/Include/cmsis_compiler.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1920,7 +1962,15 @@ bass_drum.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_wwdg.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+../../../libDaisy//src/dev/neopixel.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1928,7 +1978,7 @@ bass_drum.h:
 
 ../../../libDaisy//src/dev/leddriver.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1936,7 +1986,7 @@ bass_drum.h:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rng.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1946,7 +1996,7 @@ bass_drum.h:
 build/Drum808.d:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 23:02:33
+#  Last modified 2022-08-13 12:36:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1954,7 +2004,7 @@ build/Drum808.d:
 
 ../../../libDaisy//src/hid/switch3.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1962,7 +2012,7 @@ build/Drum808.d:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_smbus.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1970,7 +2020,7 @@ build/Drum808.d:
 
 ../../../libDaisy//src/hid/logger.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -1989,13 +2039,13 @@ program-boot:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `../../../libDaisy//core/Makefile', line 295):
-	dfu-util -a 0 -s $(FLASH_ADDRESS):leave -D $(BOOT_BIN) -d ,0483:df11
+#  commands to execute (from `../../../libDaisy//core/Makefile', line 333):
+	dfu-util -a 0 -s $(INTERNAL_ADDRESS):leave -D $(BOOT_BIN) -d ,0483:$(STM_PID)
 	
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -2003,7 +2053,8 @@ program-boot:
 
 ../../../libDaisy//src/ui/../util/FIFO.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+ 
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -2011,7 +2062,7 @@ program-boot:
 
 ../../../libDaisy//Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:18
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -2019,15 +2070,14 @@ program-boot:
 
 ../../../libDaisy//src/util/PersistentStorage.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-29 10:08:19
+#  Last modified 2022-08-13 10:01:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
- 
-# Load=209/1024=20%, Rehash=0, Collisions=206/1462=14%
+# Load=215/1024=21%, Rehash=0, Collisions=212/1475=14%
 # VPATH Search Paths
 
 vpath %.c ../../../libDaisy//core
@@ -2041,6 +2091,6 @@ vpath %.c ../../../libDaisy//core
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 3940 / max = 3940 / min = 3940 / avg = 3940
 
-# Finished Make data base on Tue Jul 12 19:55:29 2022
+# Finished Make data base on Sat Aug 13 14:48:56 2022
 
  
