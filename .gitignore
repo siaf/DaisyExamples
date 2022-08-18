@@ -131,5 +131,6 @@ MyProjects/
 .cortex-debug.registers.state.json
 .cortex-debug.peripherals.state.json
 
-.vscode
-/**/.vscode/*.*
+
+**/.vscode/*.*
+!**/.vscode/c_cpp_properties.json

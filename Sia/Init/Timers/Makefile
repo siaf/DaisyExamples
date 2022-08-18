@@ -2,7 +2,10 @@
 TARGET = Timers
 
 # Sources
-CPP_SOURCES = Timers.cpp
+CPP_SOURCES = Timers.cpp 
+
+Sia_Lib= ../../lib/
+include $(Sia_Lib)/Makefile
 
 # Library Locations
 LIBDAISY_DIR = ../../../libDaisy/
