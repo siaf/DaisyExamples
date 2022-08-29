@@ -2,6 +2,7 @@
 #include "daisysp.h"
 #include "ShapeShifterHW.h"
 #include "UI/MainMenuItem.cpp"
+#include "sia_lib.h"
 
 using namespace daisy;
 using namespace daisysp;
@@ -210,7 +211,94 @@ class CVOutGate : public Applet
         hw.display.WriteString(strbuff, Font_7x10, false);
     };
 };
+class WtOscMenu : public Applet
+{
+  private:
+    char strbuff[128];
 
+    float fm;
+    float freq;
+    float fine;
+    float FMwidth;
+    float spread;
+
+    OscilatorWaveTable osc1;
+    OscilatorWaveTable osc2;
+    OscilatorWaveTable osc3;
+
+    void UpdateCtrls(ShapeShifterHW& hw)
+    {
+        freq    = 60 + (hw.CtrlVal(CTRL1) * 2000);
+        fine    = (hw.CtrlVal(CTRL8, true) * 100) - 50;
+        FMwidth = hw.CtrlVal(CTRL7, true) * 100;
+        spread  = hw.CtrlVal(CTRL6, true) * 15;
+        if(spread < 1.f)
+        {
+            spread = 0.f;
+        }
+        fm = hw.CtrlVal(CTRL2, true);
+    }
+
+  public:
+    WtOscMenu(const char* title, float samplerate)
+    {
+        sprintf(name, title);
+        AudioProcessing     = true;
+        TimerbasedProcssing = true;
+
+        osc1.Init(samplerate);
+        osc2.Init(samplerate);
+        osc3.Init(samplerate);
+    }
+    ~WtOscMenu() override{};
+
+    void ProcessTimeBased(ShapeShifterHW& hw) override
+    {
+        UpdateCtrls(hw);
+
+        float f = freq + fine;
+        osc1.SetFreq(f * ((100.f - spread) / 100.f));
+        osc2.SetFreq(f);
+        osc3.SetFreq(f * ((100.f + spread) / 100.f));
+    };
+
+    void ProcessAudio(const float inL,
+                      const float inR,
+                      float&      outL,
+                      float&      outR) override
+    {
+        float osc_out, osc1_out, osc2_out, osc3_out;
+
+        osc1_out = osc1.Process();
+        osc2_out = osc2.Process();
+        osc3_out = osc3.Process();
+        osc_out  = (osc1_out + osc2_out + osc3_out) / 3.f;
+
+        outL = osc_out;
+        outR = osc_out;
+    };
+
+    void RenderDisplay(ShapeShifterHW& hw) override
+    {
+        UpdateCtrls(hw);
+
+        sprintf(strbuff, "Freq: %d", static_cast<int>(freq + fine));
+        hw.display.SetCursor(0, 20);
+        hw.display.WriteString(strbuff, Font_7x10, false);
+
+        sprintf(strbuff, "Spread: %d", static_cast<int>(spread));
+        hw.display.SetCursor(0, 28);
+        hw.display.WriteString(strbuff, Font_7x10, false);
+
+        sprintf(strbuff, "FM Width: %d", static_cast<int>(FMwidth));
+        hw.display.SetCursor(0, 36);
+        hw.display.WriteString(strbuff, Font_7x10, false);
+
+        sprintf(strbuff, "FM CV 2: %d", static_cast<int>(fm));
+        hw.display.SetCursor(0, 44);
+        hw.display.WriteString(strbuff, Font_7x10, false);
+    };
+};
 class SimpleOscMenu : public Applet
 {
   private:
@@ -454,17 +542,17 @@ void ConfigureMenu()
     //How many samples we'll output per second
     float samplerate = hw.AudioSampleRate();
 
-    //Setup Menus
-    menu[0] = new MenuItem("Test");
+    menu[0] = new MenuItem("Osc"); // Multiple SAWs, Physical Osc, FM Osc, etc.
+    menu[0]->subMenus.push_back(new WtOscMenu("WT", samplerate));       // SAW
+    menu[0]->subMenus.push_back(new SimpleOscMenu("Simp", samplerate)); // SAW
     menu[0]->subMenus.push_back(new TestKnobs("1-5"));
     menu[0]->subMenus.push_back(new TestCvsIns("6-9"));
-    menu[0]->subMenus.push_back(new Osciloscope("scope", samplerate));
 
-    menu[1] = new MenuItem("Osc"); // Multiple SAWs, Physical Osc, FM Osc, etc.
-    menu[1]->subMenus.push_back(new SimpleOscMenu("Simp", samplerate)); // SAW
+    //Setup Menus
+    menu[1] = new MenuItem("Test");
     menu[1]->subMenus.push_back(new TestKnobs("1-5"));
-    menu[1]->subMenus.push_back(new SimpleOscMenu("Simp2", samplerate)); // SAW
     menu[1]->subMenus.push_back(new TestCvsIns("6-9"));
+    menu[1]->subMenus.push_back(new Osciloscope("scope", samplerate));
 
     menu[2] = new MenuItem("CVs");
     // 2Hz by default

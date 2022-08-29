@@ -4,6 +4,9 @@ TARGET = Quantizer
 # Sources
 CPP_SOURCES = Quantizer.cpp
 
+Sia_Lib= ../../lib/
+include $(Sia_Lib)/Makefile
+
 # Library Locations
 LIBDAISY_DIR = ../../../libDaisy/
 DAISYSP_DIR = ../../../DaisySP/

@@ -6,3 +6,5 @@ C_INCLUDES ?= -include stm32h7xx.h
 #include every new folder in the library here.
 C_INCLUDES += -I../../lib/
 C_INCLUDES += -I../../lib/timers
+C_INCLUDES += -I../../lib/filter
+C_INCLUDES += -I../../lib/osc

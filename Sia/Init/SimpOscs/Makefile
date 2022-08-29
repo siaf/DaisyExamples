@@ -1,6 +1,9 @@
 # Project Name
 TARGET = SimpOscs
 
+Sia_Lib= ../../lib/
+include $(Sia_Lib)/Makefile
+
 # Sources
 CPP_SOURCES = SimpOscs.cpp
 
